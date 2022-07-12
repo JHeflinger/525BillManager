@@ -175,8 +175,7 @@ def calculateBills():
             for i in range(len(bills)):
                 str = bills[i] + "," + basePrice[i].__str__() + "," + usagePrice[i].__str__() + "," + fullPrice[i].__str__() + "\n"
                 f.write(str)
-            f.write("\n")
-            f.write("RESIDENT,#,BILL\n")
+            f.write("RESIDENT,#,BILL")
             f.write("IN-HOUSE," + (numRoommates - numUnavailable).__str__() + "," + inHouseBill.__str__() + "\n")
             f.write("OUT_HOUSE," + numUnavailable.__str__() + "," + outOfHouseBill.__str__() + "\n")
         sysPrint("Finished generating report! Bill reports can be found inside the \"Reports\" folder!")
